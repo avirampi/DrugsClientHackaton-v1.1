@@ -12,6 +12,7 @@ public class MyPillInformation
     private String pillElegranIngredients = "";
     private String pillPregnancySafe = "";
     private String pillurl = "";
+    private String pillInstructions = "";
 
 
     //----------------------------------Setters----------------------------------------------------
@@ -24,6 +25,7 @@ public class MyPillInformation
         setId(i_detailsObj.getString("id"));
         setDosAge(i_detailsObj.getString("dosage"));
         setPregnancySafe(i_detailsObj.getBoolean("pregnancySafe"));
+        setInstructions(i_detailsObj.getString("instructions"));
     }
 
     public void setName(String name)
@@ -61,6 +63,10 @@ public class MyPillInformation
             this.pillPregnancySafe = "Not Safe";
         }
     }
+    public void setInstructions(String instructions)
+    {
+        this.pillInstructions = instructions;
+    }
 
     //----------------------------------Getters---------------------------------------------
 
@@ -91,5 +97,9 @@ public class MyPillInformation
     public String getPregnancySafe()
     {
         return pillPregnancySafe;
+    }
+    public String getInstructions()
+    {
+        return pillInstructions;
     }
 }

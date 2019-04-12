@@ -21,7 +21,7 @@ public class PillDetails extends AppCompatActivity {
     }
 
     public void SearchMethod ()  {
-
+        //fill the TextViews
         Log.i("Info", "Showing Details");
        TextView idTextView = (TextView) findViewById(R.id.idTextView);
        idTextView.setText(response.getId());
@@ -37,6 +37,8 @@ public class PillDetails extends AppCompatActivity {
         pregTextView.setText(response.getPregnancySafe());
        TextView urlTextView = (TextView) findViewById(R.id.urlTextView);
        urlTextView.setText(response.getUrl());
+       TextView instructionsTextView = (TextView) findViewById(R.id.instructionsTextView);
+       instructionsTextView.setText(response.getInstructions());
 
 
     }
